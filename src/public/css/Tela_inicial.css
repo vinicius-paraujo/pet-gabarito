@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #303030;
+  color: #FFFFFF;
+  font-family: 'Kumbh Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header.header {
+  background-color: #696666;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  max-height: 60px;
+  width: auto;
+}
+
+main.Corpo {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  padding: 40px 5%;
+  flex-wrap: wrap;
+}
+
+.Inserir_Dados, .Pesquisa {
+  background-color: #383838;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 400px;
+  min-width: 300px;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+h2 {
+  color: #FBBC4B;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #54B687;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #FBBC4B;
+  outline: none;
+}
+
+button {
+  background-color: #54B687;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navegacao .ver {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #d8440e;  /* vermelho puxando da logo */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navegacao .ver:hover {
+    background-color: #993611;  /* um tom mais escuro para o hover */
+}
+
+.sair{
+    display: flex;
+    border-radius: 20px;
+    width: 60px;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+i {
+  color: #fdfdfc;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+button:hover {
+  background-color: #3e9e71;
+}
+.buscar:hover {
+  background-color: #EC644C;
+}
+.navegacao {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer {
+  background-color: #303030;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+/* Animação inicial */
+main.Corpo, .navegacao, .sair {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  main.Corpo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
